@@ -1,0 +1,44 @@
+body {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px; /* 3 filas: header, contenido y footer */
+    grid-template-columns: 1fr 3fr 1fr; /* 3 columnas: nav, article y aside */
+    grid-template-areas:
+      "header header header"
+      "nav article aside"
+      "footer footer footer";
+    height: 100vh; /* Ajustar el tamaño al 100% de la ventana */
+    margin: 0;
+  }
+
+/* Estilos para centrar los nombres */
+header, nav, aside, article, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: lightblue;
+  }
+  
+  nav {
+    grid-area: nav;
+    background-color: lightgreen;
+  }
+  
+  aside {
+    grid-area: aside;
+    background-color: lightyellow;
+  }
+  
+  article {
+    grid-area: article;
+    background-color: lightcoral;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: lightgray;
+  }
